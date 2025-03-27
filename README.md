@@ -21,13 +21,13 @@ Welcome to **HNT Bakery**, your one-stop destination for delicious, freshly bake
 ## 🎨 Screenshots  
 
 ![App Screenshot](https://github.com/Himanshu1529/Laravel-Bakery-Website/blob/main/Screenshot%202025-03-27%20131341.png)
-![Home Page](https://hindustannexttaste.com) 
+
 
 ![App Screenshot]([https://github.com/Himanshu1529/Laravel-Bakery-Website/blob/main/Screenshot%202025-03-27%20131434.png](https://github.com/Himanshu1529/Laravel-Bakery-Website/blob/main/Screenshot%202025-03-27%20131511.png))
-![Product Page](https://hindustannexttaste.com/cake)  
+
 
 ![App Screenshot](https://github.com/Himanshu1529/Laravel-Bakery-Website/blob/main/Screenshot%202025-03-27%20131544.png)
-![Admin Dashboard](https://hindustannexttaste.com/admin)  
+
 
 ---
 
