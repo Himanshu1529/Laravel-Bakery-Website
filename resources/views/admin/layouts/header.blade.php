@@ -198,15 +198,15 @@
           
           
 
-          <!-- <li class="nav-item">
-            <a href="{{url('/admin/discount_code/list')}}" class="nav-link @if(Request::segment(2) == 'discount_code') active @endif">
+          <li class="nav-item">
+            <a href="{{url('/admin/reviews/list')}}" class="nav-link @if(Request::segment(2) == 'reviews') active @endif">
               <i class="nav-icon fas fa-box-open"></i>
               <p>
-                Discount Code
+                Client Review's
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li> -->
+          </li>
 
           <!-- <li class="nav-item">
             <a href="{{url('/admin/shipping_charge/list')}}" class="nav-link @if(Request::segment(2) == 'shipping_charge') active @endif">

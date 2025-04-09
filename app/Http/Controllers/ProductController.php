@@ -39,7 +39,8 @@ class ProductController extends Controller
 
     	if (!empty($getProductSingle)) {
 
-    		$data['meta_title'] = $getProductSingle->title;
+    		$data['header_title'] = $getProductSingle->title;
+            $data['meta_title'] = $getProductSingle->title;
     		$data['meta_description'] = $getProductSingle->short_description;
 
     		$data['getProduct'] = $getProductSingle;
@@ -52,7 +53,7 @@ class ProductController extends Controller
     		$data['meta_title'] = $getSubCategory->meta_title;
     		$data['meta_description'] = $getSubCategory->meta_description;
     		$data['meta_keywords'] = $getSubCategory->meta_keywords;
-
+            $data['header_title'] = $getSubCategory->name;
     		$data['getSubCategory'] = $getSubCategory;
     		$data['getCategory'] = $getCategory;
 
@@ -65,7 +66,7 @@ class ProductController extends Controller
     	else if (!empty($getCategory)) {
 
     		$data['getSubCategoryFilter'] = SubCategoryModel::getRecordSubCategory($getCategory->id);
-
+            $data['header_title'] = $getCategory->name;;
     		$data['meta_title'] = $getCategory->meta_title;
     		$data['meta_description'] = $getCategory->meta_description;
     		$data['meta_keywords'] = $getCategory->meta_keywords;

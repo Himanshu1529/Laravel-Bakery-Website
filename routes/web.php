@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\ProductController as ProductFront;
+use App\Http\Controllers\ReviewsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,11 +24,23 @@ use App\Http\Controllers\ProductController as ProductFront;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+
 Route::get('/',[HomeController::class,'home'])->name('home');
 
+Route::get('/admin/reviews/list', [ReviewsController::class, 'list']);
+Route::get('/review/add', [ReviewsController::class, 'add']);
+Route::get('admin/reviews/delete', [ReviewsController::class, 'delete']);
+Route::post('/review/add', [ReviewsController::class, 'store']);
+
+Route::get('/contact', function () {
+    $data['header_title'] = 'Contact Us';
+    return view('contact', $data);
+});
+
+Route::get('/about', function () {
+    $data['header_title'] = 'About Us';
+    return view('about', $data);
+});
 
 
 Route::get('admin',[AuthController::class,'login_admin']);
@@ -98,3 +112,4 @@ Route::group(['middleware' => 'admin'],function(){
 Route::get('search',[ProductFront::class,'getProductSearch']);
 Route::get('{slug?}/{subslug?}',[ProductFront::class,'getCategory']);
 Route::post('get_filter_product_ajax',[ProductFront::class,'getFilterProductAjax']);
+
